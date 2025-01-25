@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-size: 4vmin;
+    min-height: 100vh;
+    display: grid;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #efedf3, #e9fbfd);
+    place-items: center;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vmin;
+    height: 40vmin;
+    position: relative;
+    padding: 4vmin;
+}
+
+.hr, .min, .sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4vmin;
+    grid-row: 1 / 2;
+    align-items: start;
+}
+
+.number {
+    user-select: none;
+    width: 8vmin;
+    height: 8vmin;
+    display: grid;
+    place-items: center;
+    color: #af9fbfd;
+    transition: all 500ms 100ms ease;
+    border-radius: 50%;
+}
+
+.number.pop {
+    color: #3e6c75;
+    font-weight: bold;
+    transform: scale(1.3);
+    background-color: #dfe6f6;
+    box-shadow: 1vmin 1vmin 0.5vmin #b5c5d1, -1vmin -1vmin 0.5vmin #ffffff;
+}
+
+.strip {
+    transition: transform 500ms ease-in-out;
+    border-radius: 1.3333vmin;
+    background-color: #efedf3;
+    box-shadow: -1vmin -1vmin 2vmin 0.5vmin #ffffff, 1vmin 1vmin 2vmin 0.5vmin #b5c5d1;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8vmin;
+    height: 4vmin;
+    position: relative;
+    padding: 0 4vmin;
+}
